@@ -1,0 +1,361 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit&family=Poppins:wght@400;500&display=swap");
+
+*,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 92.5%;
+}
+
+:root {
+  --bg-dark: #000000;
+  --text-light: #ffffff;
+  --hover-color: #4c5fd5;
+  --bg-home-color: #dadbf1;
+  --hover-logo-color: #c3c3c3;
+  font-family: "Poppins" Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: green;
+}
+
+/* header */
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: var(--bg-dark);
+  position: relative;
+}
+
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  color: var(--text-light);
+  padding: 1rem 7rem;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 0.5rem;
+}
+
+.logo .text-logo {
+  font-size: 1.6rem;
+  text-transform: capitalize;
+  transition: 0.3s linear;
+}
+
+.logo .text-logo {
+  /* color: var(--hover-logo-color); */
+}
+
+.logo .span-logo {
+  font-size: 1.6rem;
+  text-transform: capitalize;
+}
+
+.logo .help-logo {
+  font-size: 1.6rem;
+  text-transform: capitalize;
+  transition: 0.3s linear;
+}
+
+.logo .help-logo:hover {
+  text-decoration: underline;
+}
+
+.register {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 1rem;
+}
+
+.register .btn1 {
+  border: 2px solid var(--text-light);
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  text-transform: capitalize;
+  padding: 0.8rem 1.5rem;
+  font-size: 1.2rem;
+  border-radius: 0.4rem;
+  cursor: pointer;
+}
+
+.register .btn2 {
+  border: solid var(--hover-color);
+  background-color: var(--hover-color);
+  color: var(--text-light);
+  text-transform: capitalize;
+  padding: 0.8rem 1.5rem;
+  font-size: 1.2rem;
+  border-radius: 0.4rem;
+  transition: 0.3s linear;
+  cursor: pointer;
+}
+
+.register .btn2:hover {
+  border: solid var(--text-light);
+  background-color: var(--text-light);
+  color: var(--bg-dark);
+}
+
+.second-nav {
+  border-top: 1px solid #686666;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  gap: 1rem;
+  display: none;
+}
+
+.second-nav .btn1 {
+  border-bottom: 1px solid #686666;
+  width: 60%;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  background-color: transparent;
+  color: var(--text-light);
+  text-transform: capitalize;
+  padding: 0.8rem 1.5rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.second-nav .btn2 {
+  width: 60%;
+  border: none;
+  background-color: transparent;
+  color: var(--text-light);
+  text-transform: capitalize;
+  padding: 0.8rem 1.5rem;
+  font-size: 1.5rem;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.second-nav .btn1:hover,
+.second-nav .btn2:hover {
+  color: #686666;
+}
+
+.hamburger-nav {
+  display: none;
+}
+
+.inputSearch {
+  display: none;
+}
+/* end header */
+
+/* responsive */
+@media (max-width: 1200px) {
+  html {
+    font-size: 55%;
+  }
+  .register {
+    display: none;
+  }
+
+  /* hamburger */
+  .hamburger-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hamburger-nav .search {
+    font-size: 1.8rem;
+  }
+
+  .hamburger-nav .item {
+    display: inline-block;
+    margin: 0.3rem;
+    width: 33px;
+    background-color: var(--text-light);
+    height: 2px;
+    transition: 0.3s ease-in-out;
+  }
+  .item:nth-child(1) {
+    transform: rotate(0);
+  }
+
+  .item:nth-child(2) {
+    transform: scale(1);
+  }
+
+  .item:nth-child(3) {
+    transform: rotate(0);
+  }
+
+  .hamburger.active .item:nth-child(1) {
+    transform: rotate(45deg);
+    transform-origin: 0 0;
+  }
+
+  .hamburger.active .item:nth-child(2) {
+    transform: scale(0);
+  }
+
+  .hamburger.active .item:nth-child(3) {
+    transform-origin: 0 100%;
+    transform: rotate(-45deg);
+  }
+  /* end hamburger */
+
+  /* search */
+  .inputSearch {
+    position: absolute;
+    display: flex;
+    background-color: var(--text-light);
+    padding: 1rem;
+    width: 100%;
+    display: none;
+  }
+
+  .wrapper {
+    min-width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+  }
+
+  .inputSearch input {
+    width: 90%;
+    padding: 0.5rem;
+    text-transform: capitalize;
+    font-size: 1rem;
+    border-color: #000000;
+    border-radius: 0.5rem;
+  }
+
+  .close {
+    font-weight: 800;
+  }
+  /* end search */
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 52%;
+  }
+  /* navbar hamburger */
+  .navbar {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    color: var(--text-light);
+    padding: 1rem;
+    justify-content: space-between;
+  }
+
+  .register {
+    display: none;
+  }
+
+  .hamburger-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .hamburger-nav .search {
+    font-size: 1.8rem;
+  }
+
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+  }
+  .hamburger-nav .item {
+    display: inline-block;
+    margin: 0.3rem;
+    width: 23px;
+    background-color: var(--text-light);
+    height: 3px;
+    transition: 0.3s ease-in-out;
+  }
+  .item:nth-child(1) {
+    transform: rotate(0);
+  }
+
+  .item:nth-child(2) {
+    transform: scale(1);
+  }
+
+  .item:nth-child(3) {
+    transform: rotate(0);
+  }
+
+  .hamburger.active .item:nth-child(1) {
+    transform: rotate(45deg);
+    transform-origin: 0 0;
+  }
+
+  .hamburger.active .item:nth-child(2) {
+    transform: scale(0);
+  }
+
+  .hamburger.active .item:nth-child(3) {
+    transform-origin: 0 100%;
+    transform: rotate(-45deg);
+  }
+  /* end hamburger */
+
+  /* search */
+  .inputSearch {
+    position: absolute;
+    display: flex;
+    background-color: var(--text-light);
+    padding: 1rem;
+    width: 100%;
+    display: none;
+  }
+
+  .wrapper {
+    min-width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+  }
+
+  .inputSearch input {
+    width: 90%;
+    padding: 0.5rem;
+    text-transform: capitalize;
+    font-size: 1rem;
+    border-color: #000000;
+    border-radius: 0.5rem;
+  }
+
+  .close {
+    font-weight: 800;
+  }
+}
