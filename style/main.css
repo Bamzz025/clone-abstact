@@ -367,15 +367,6 @@ body {
 @media (max-width: 1200px) {
   html {
     font-size: 55%;
-    box-sizing: border-box;
-  }
-
-  .header {
-    width: 100%;
-  }
-
-  .footer {
-    width: 100%;
   }
 
   .navbar {
@@ -567,17 +558,6 @@ body {
 }
 
 @media (max-width: 768px) {
-  html {
-    box-sizing: border-box;
-  }
-
-  .header {
-    width: 100%;
-  }
-
-  .footer {
-    width: 100%;
-  }
   /* navbar hamburger */
   .navbar {
     display: flex;
@@ -685,19 +665,6 @@ body {
 @media (max-width: 450px) {
   html {
     font-size: 50%;
-    box-sizing: border-box;
-  }
-
-  .header {
-    width: 100%;
-  }
-
-  .navbar{
-    width: 100%;
-  }
-
-  .footer {
-    width: 100%;
   }
 
   .navbar {
@@ -800,7 +767,6 @@ body {
   }
    /* footer */
 .footer {
-  width: 100%;
   background-color: var(--bg-dark);
   height: auto;
 }
